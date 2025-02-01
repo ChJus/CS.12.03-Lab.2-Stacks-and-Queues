@@ -33,7 +33,7 @@ public class Stack implements IStack {
   @Override
   public void push(Object element) throws StackOverflowException {
     // Do not allow push operation if stack is full.
-    if (capacity == count) throw new StackOverflowException();
+    if (isFull()) throw new StackOverflowException();
 
     // Add element to array depending on direction of index traversal.
     // If we start at index 0, then add element to array[count] and increment count.
@@ -96,6 +96,11 @@ public class Stack implements IStack {
   @Override
   public boolean isEmpty() {
     return count == 0;
+  }
+
+  @Override
+  public boolean isFull() {
+    return size() == capacity();
   }
 
   // Clears the stack.

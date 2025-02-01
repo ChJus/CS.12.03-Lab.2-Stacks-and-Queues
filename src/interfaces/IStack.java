@@ -49,6 +49,13 @@ public interface IStack {
   boolean isEmpty();
 
   /**
+   * Checks whether stack is full.
+   *
+   * @return true if stack is full.
+   */
+  boolean isFull();
+
+  /**
    * Removes all elements from the stack.
    */
   void clear();

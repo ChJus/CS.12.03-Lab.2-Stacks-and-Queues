@@ -31,11 +31,23 @@ public interface IQueue {
   int size();
 
   /**
+   * Returns the maximum capacity of the queue.
+   */
+  int capacity();
+
+  /**
    * Checks whether the queue is empty.
    *
    * @return true if the queue is empty
    */
   boolean isEmpty();
+
+  /**
+   * Checks whether queue is full.
+   *
+   * @return true if queue is full.
+   */
+  boolean isFull();
 
   /**
    * Removes all elements from the queue.
